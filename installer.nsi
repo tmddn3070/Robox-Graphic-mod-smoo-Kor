@@ -58,8 +58,8 @@ $\r$\n\
 !define MUI_FINISHPAGE_TEXT_LARGE
 !define MUI_FINISHPAGE_TEXT "컴퓨터에 ${PRODUCT_NAME}가 성공적으로 설치 완료됬습니다.$\r$\n\
 $\r$\n\
-Click Finish to exit Setup."
-!define MUI_FINISHPAGE_RUN
+마침을 클릭하여 설치기를 종료합니다."
+!define MUI_FINISHPAE_RUN
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_LICENSE "smoo-preset\license.txt"
 !insertmacro MUI_PAGE_COMPONENTS
