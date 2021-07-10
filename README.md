@@ -1,23 +1,4 @@
 # Roblox-Graphic-mods-smoo-
-roblox graphic mod
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+roblox graphic mod (kor)
 
 (source based by extravi)
