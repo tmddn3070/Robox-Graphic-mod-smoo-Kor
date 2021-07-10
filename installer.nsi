@@ -52,7 +52,7 @@ InstType "Full";1
 $\r$\n\
 이 설치를 계속하기 전에 로블록스를 닫는것이 좋습니다.$\r$\n\
 $\r$\n\
-Click Next to continue."
+계속하려면 다음을 클릭하세요."
 !define MUI_LICENSEPAGE_RADIOBUTTONS
 !define MUI_COMPONENTSPAGE_NODESC
 !define MUI_FINISHPAGE_TEXT_LARGE
