@@ -56,9 +56,9 @@ $\r$\n\
 !define MUI_LICENSEPAGE_RADIOBUTTONS
 !define MUI_COMPONENTSPAGE_NODESC
 !define MUI_FINISHPAGE_TEXT_LARGE
-!define MUI_FINISHPAGE_TEXT "컴퓨터에 ${PRODUCT_NAME}가 성공적으로 설치 완료됬습니다.$\r$\n\
+!define MUI_FINISHPAGE_TEXT "컴퓨터에 ${PRODUCT_NAME}가 성공적으로 설치가 완료되었습니다.$\r$\n\
 $\r$\n\
-마침을 클릭하여 설치기를 종료합니다."
+마침을 클릭하여 이 설치기를 종료합니다."
 !define MUI_FINISHPAE_RUN
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_LICENSE "smoo-preset\license.txt"
