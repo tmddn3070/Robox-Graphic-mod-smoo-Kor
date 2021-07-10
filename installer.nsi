@@ -48,20 +48,17 @@ InstType "Full";1
 !define MUI_UNICON "sit8.ico"
 !define MUI_ABORTWARNING
 !define MUI_WELCOMEFINISHPAGE_BITMAP "smoo.bmp"
-!define MUI_WELCOMEPAGE_TEXT "This will install ${PRODUCT_NAME} on your computer.$\r$\n\
+!define MUI_WELCOMEPAGE_TEXT "이 설치기는 당신의 컴퓨터에 ${PRODUCT_NAME}를 설치할것입니다 .$\r$\n\
 $\r$\n\
-It is recommended that you close Roblox before continuing.$\r$\n\
+이 설치를 계속하기 전에 로블록스를 닫는것이 좋습니다.$\r$\n\
 $\r$\n\
 Click Next to continue."
 !define MUI_LICENSEPAGE_RADIOBUTTONS
 !define MUI_COMPONENTSPAGE_NODESC
 !define MUI_FINISHPAGE_TEXT_LARGE
-!define MUI_FINISHPAGE_TEXT "Setup has finished installing ${PRODUCT_NAME} on your computer. The effects will be applied the next time you launch Roblox.$\r$\n\
+!define MUI_FINISHPAGE_TEXT "컴퓨터에 ${PRODUCT_NAME}가 성공적으로 설치 완료됬습니다.$\r$\n\
 $\r$\n\
 Click Finish to exit Setup."
-!define MUI_FINISHPAGE_SHOWREADME "https://www.youtube.com/channel/UCEuAqd2wL5QPBlc1dPiiBMg/featured"
-!define MUI_FINISHPAGE_SHOWREADME_NOTCHECKED
-!define MUI_FINISHPAGE_SHOWREADME_TEXT "Subscribe to smoo on Youtube"
 !define MUI_FINISHPAGE_RUN
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_LICENSE "smoo-preset\license.txt"
@@ -75,7 +72,7 @@ Click Finish to exit Setup."
 ####################################################################
 # Language
 
-!insertmacro MUI_LANGUAGE "English"
+!insertmacro MUI_LANGUAGE "Korean"
 
 
 ####################################################################
@@ -185,14 +182,14 @@ Function .onInit
   ${Locate} "$LOCALAPPDATA\Roblox\Versions" "/L=F /M=RobloxPlayerBeta.exe" "SetRobloxPath"  
   
   ${If} $robloxPath == ""
-    MessageBox MB_ICONEXCLAMATION "Roblox installation not found. Install Roblox on https://www.roblox.com/download/client and try again."
+    MessageBox MB_ICONEXCLAMATION "Roblox를 찾지 못하였습니다. https://www.roblox.com/download/client 이 링크에서 로블록스를 다운로드하고 다시시도하세요."
     ExecShell open "https://www.roblox.com/download/client"
     Abort
   ${EndIf}
 FunctionEnd
 
 Function "Exit"
-  MessageBox MB_ICONEXCLAMATION "Cannot install when Roblox is located in C:\Program Files (x86). Please reinstall Roblox as non-admin and try again."
+  MessageBox MB_ICONEXCLAMATION "로블록스 Path가 C:\Program Files (x86에 있는경우 설치할 수 없습니다 관리자가 아닌 계정으로 로블록스를 설치하시고 다시시도하세요."
   Abort
 FunctionEnd
 
