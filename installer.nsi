@@ -44,8 +44,8 @@ InstType "Full";1
 
 ####################################################################
 # Pages
-!define MUI_ICON "export512px.ico"
-!define MUI_UNICON "export512px.ico"
+!define MUI_ICON "setupicon.ico"
+!define MUI_UNICON "setupicon.ico"
 !define MUI_ABORTWARNING
 !define MUI_WELCOMEFINISHPAGE_BITMAP "smoo.bmp"
 !define MUI_WELCOMEPAGE_TEXT "이 설치기는 당신의 컴퓨터에 ${PRODUCT_NAME}를 설치할것입니다 .$\r$\n\
