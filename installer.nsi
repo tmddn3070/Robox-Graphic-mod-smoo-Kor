@@ -1,8 +1,5 @@
 ﻿Unicode true
 
-####################################################################
-# Includes
-
 !include MUI2.nsh
 !include FileFunc.nsh
 !include LogicLib.nsh
@@ -11,8 +8,6 @@
 Var /GLOBAL switch_overwrite
 !include MoveFileFolder.nsh
 
-####################################################################
-# File Info
 !define PRODUCT_NAME "SMOO Roblox Graphic mod"
 !define PRODUCT_DESCRIPTION "Shader presets and Graphic mod based on extravi,sitiom"
 !define COPYRIGHT "Copyright © 2021 smoo"
@@ -25,8 +20,6 @@ VIAddVersionKey "FileDescription" "${PRODUCT_DESCRIPTION}"
 VIAddVersionKey "LegalCopyright" "${COPYRIGHT}"
 VIAddVersionKey "FileVersion" "${VERSION}.0"
 
-####################################################################
-# Installer Attributes
 
 Name "${PRODUCT_NAME}"
 Outfile "Setup - ${PRODUCT_NAME}.exe"
@@ -36,14 +29,7 @@ BrandingText "${PRODUCT_NAME}"
 RequestExecutionLevel user
  
 InstallDir "$LOCALAPPDATA\${PRODUCT_NAME}"
-
-####################################################################
-# Interface Settings
-
 InstType "Full";1
-
-####################################################################
-# Pages
 !define MUI_ICON "setupicon.ico"
 !define MUI_UNICON "setupicon.ico"
 !define MUI_ABORTWARNING
@@ -53,6 +39,8 @@ $\r$\n\
 이 설치를 계속하기 전에 로블록스를 닫는것이 좋습니다.$\r$\n\
 $\r$\n\
 계속하려면 다음을 클릭하세요."
+
+
 !define MUI_LICENSEPAGE_RADIOBUTTONS
 !define MUI_COMPONENTSPAGE_NODESC
 !define MUI_FINISHPAGE_TEXT_LARGE
@@ -68,15 +56,7 @@ $\r$\n\
 !insertmacro MUI_PAGE_FINISH
 !insertmacro MUI_UNPAGE_CONFIRM
 !insertmacro MUI_UNPAGE_INSTFILES
-
-####################################################################
-# Language
-
 !insertmacro MUI_LANGUAGE "Korean"
-
-
-####################################################################
-# Sections
 RequestExecutionLevel admin
 Var robloxPath
 
@@ -170,10 +150,6 @@ Section "uninstall"
   Delete "$robloxPath\opengl32.log"
 SectionEnd
 
-
-
-####################################################################
-# Functions
 
 Function .onInit
   ${Locate} "$PROGRAMFILES\Roblox\Versions" "/L=F /M=RobloxPlayerBeta.exe" "Exit"
