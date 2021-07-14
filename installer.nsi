@@ -68,13 +68,13 @@ Section "ReShade (required)"
   WriteUninstaller "$INSTDIR\uninstall.exe"
 
   ; Uninstall Regkeys
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\extravi-reshade-presets" "DisplayIcon" "$INSTDIR\uninstall.exe"
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\extravi-reshade-presets" "DisplayName" "${PRODUCT_NAME}"
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\extravi-reshade-presets" "DisplayVersion" "${VERSION}"
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\extravi-reshade-presets" "QuietUninstallString" "$INSTDIR\uninstall.exe /S"
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\extravi-reshade-presets" "UninstallString" "$INSTDIR\uninstall.exe"
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\extravi-reshade-presets" "InstallLocation" "$INSTDIR"
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\extravi-reshade-presets" "Publisher" "smoo"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\smoo-presets" "DisplayIcon" "$INSTDIR\uninstall.exe"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\smoo-presets" "DisplayName" "${PRODUCT_NAME}"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\smoo-presets" "DisplayVersion" "${VERSION}"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\smoo-presets" "QuietUninstallString" "$INSTDIR\uninstall.exe /S"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\smoo-presets" "UninstallString" "$INSTDIR\uninstall.exe"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\smoo-presets" "InstallLocation" "$INSTDIR"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\smoo-presets" "Publisher" "smoo"
 
   NSCurl::http GET "https://github.com/crosire/reshade-shaders/archive/refs/heads/master.zip" "reshade-shaders-master.zip" /END
   nsisunz::Unzip "reshade-shaders-master.zip" "$INSTDIR"
@@ -165,7 +165,7 @@ Function .onInit
 FunctionEnd
 
 Function "Exit"
-  MessageBox MB_ICONEXCLAMATION "로블록스 Path가 C:\Program Files (x86에 있는경우 설치할 수 없습니다 관리자가 아닌 계정으로 로블록스를 설치하시고 다시시도하세요."
+  MessageBox MB_ICONEXCLAMATION "로블록스 Path가 C:\Program Files (x86)에 있는경우 설치할 수 없습니다. 관리자가 아닌 계정으로 로블록스를 설치하시고 다시시도하세요."
   Abort
 FunctionEnd
 
