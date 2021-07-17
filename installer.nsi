@@ -129,6 +129,7 @@ SectionGroup /e "Presets"
     SectionIn 1
     File "smoo-preset\smoo-Ultra.ini"
   SectionEnd
+    Section "Very-Ultra"
      SectionIn 1
     File "smoo-preset\smoo-Very-Ultra.ini"
   SectionEnd
@@ -147,6 +148,7 @@ Section "uninstall"
   Delete "$robloxPath\smoo-medium.ini"
   Delete "$robloxPath\smoo-High.ini"
   Delete "$robloxPath\smoo-Ultra.ini"
+  Delete "$robloxPath\smoo-Very-Ultra.ini"
   Delete "$robloxPath\ReShade.ini"
   RMDir /r "$robloxPath\reshade-shaders"
   Delete "$robloxPath\opengl32.dll"
