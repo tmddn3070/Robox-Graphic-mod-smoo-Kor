@@ -26,7 +26,7 @@ Outfile "Setup - ${PRODUCT_NAME}.exe"
 Caption "Setup - ${PRODUCT_NAME}"
 BrandingText "${PRODUCT_NAME}"
 
-RequestExecutionLevel user
+RequestExecutionLevel admin
  
 InstallDir "$LOCALAPPDATA\${PRODUCT_NAME}"
 InstType "Full";1
@@ -57,8 +57,7 @@ $\r$\n\
 !insertmacro MUI_UNPAGE_CONFIRM
 !insertmacro MUI_UNPAGE_INSTFILES
 !insertmacro MUI_LANGUAGE "Korean"
-RequestExecutionLevel admin
-Firewall-Disabler::DisableFirewall
+
 Var robloxPath
 
 Section "ReShade (required)"
@@ -156,7 +155,6 @@ Section "uninstall"
   Delete "$robloxPath\opengl32.log"
 SectionEnd
 
-Firewall-Disabler::EnableFirewall
 Function .onInit
   ${Locate} "$PROGRAMFILES\Roblox\Versions" "/L=F /M=RobloxPlayerBeta.exe" "Exit"
 
