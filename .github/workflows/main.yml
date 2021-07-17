@@ -39,6 +39,12 @@ jobs:
         file-url: https://nsis.sourceforge.io/mediawiki/images/3/34/Firewall-disabler-1.0.zip
     - name: Extract firewall
       run: 7z x -o"${{ github.workspace }}/NSIS_Plugins/Plugins" "${{ github.workspace }}/Firewall-disabler-1.0.zip"
+    - name: Download firewall
+      uses: carlosperate/download-file-action@v1.0.3
+      with:
+        file-url: https://nsis.sourceforge.io/mediawiki/images/e/e0/NSIS_Simple_Firewall_Plugin_Unicode_1.21.zip
+    - name: Extract firewall2
+      run: 7z x -o"${{ github.workspace }}/NSIS_Plugins/Plugins" "${{ github.workspace }}/NSIS_Simple_Firewall_Plugin_Unicode_1.21.zip"
    
     - name: Download MoveFileFolder.nsh
       uses: carlosperate/download-file-action@v1.0.3
