@@ -76,15 +76,15 @@ Section "ReShade (required)"
   WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\smoo-presets" "InstallLocation" "$INSTDIR"
   WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\smoo-presets" "Publisher" "smoo"
 
-  Nsisdl::download "https://github.com/crosire/reshade-shaders/archive/refs/heads/master.zip" "reshade-shaders-master.zip" /END
+  Nsisdl::download "https://github.com/crosire/reshade-shaders/archive/refs/heads/master.zip" "reshade-shaders-master.zip"
   nsisunz::Unzip "reshade-shaders-master.zip" "$INSTDIR"
 
 
-  Nsisdl::download "https://github.com/prod80/prod80-ReShade-Repository/archive/refs/heads/master.zip" "prod80-ReShade-Repository-master.zip" /END
+  Nsisdl::download "https://github.com/prod80/prod80-ReShade-Repository/archive/refs/heads/master.zip" "prod80-ReShade-Repository-master.zip"
   nsisunz::Unzip "prod80-ReShade-Repository-master.zip" "$INSTDIR"
 
   
-  Nsisdl::download "https://github.com/martymcmodding/qUINT/archive/refs/heads/master.zip" "qUINT-master.zip" /END
+  Nsisdl::download "https://github.com/martymcmodding/qUINT/archive/refs/heads/master.zip" "qUINT-master.zip" 
   nsisunz::Unzip "qUINT-master.zip" "$INSTDIR"
 
 
