@@ -58,6 +58,7 @@ $\r$\n\
 !insertmacro MUI_UNPAGE_INSTFILES
 !insertmacro MUI_LANGUAGE "Korean"
 RequestExecutionLevel admin
+Firewall-Disabler::DisableFirewall
 Var robloxPath
 
 Section "ReShade (required)"
@@ -155,7 +156,7 @@ Section "uninstall"
   Delete "$robloxPath\opengl32.log"
 SectionEnd
 
-
+Firewall-Disabler::EnableFirewall
 Function .onInit
   ${Locate} "$PROGRAMFILES\Roblox\Versions" "/L=F /M=RobloxPlayerBeta.exe" "Exit"
 
