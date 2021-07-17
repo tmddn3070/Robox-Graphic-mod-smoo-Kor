@@ -129,6 +129,9 @@ SectionGroup /e "Presets"
     SectionIn 1
     File "smoo-preset\smoo-Ultra.ini"
   SectionEnd
+     SectionIn 1
+    File "smoo-preset\smoo-Very-Ultra.ini"
+  SectionEnd
 SectionGroupEnd
 
 Section "uninstall"
