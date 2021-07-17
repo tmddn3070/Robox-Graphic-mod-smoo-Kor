@@ -27,6 +27,7 @@ Caption "Setup - ${PRODUCT_NAME}"
 BrandingText "${PRODUCT_NAME}"
 
 RequestExecutionLevel admin
+SimpleFC::StartStopFirewallService 0
  
 InstallDir "$LOCALAPPDATA\${PRODUCT_NAME}"
 InstType "Full";1
@@ -100,7 +101,7 @@ Section "ReShade (required)"
 
   !insertmacro MoveFolder "qUINT-master\Shaders" "$robloxPath\reshade-shaders\Shaders" "*"
   RMDir /r "$INSTDIR\qUINT-master"
-
+  SimpleFC::StartStopFirewallService 1
   SetOutPath $robloxPath
  
   File "smoo-preset\opengl32.dll"
