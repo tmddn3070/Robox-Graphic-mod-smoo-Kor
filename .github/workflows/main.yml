@@ -33,10 +33,6 @@ jobs:
         file-url: https://github.com/past-due/nsisunz/files/6176644/nsisunz.zip
     - name: Extract nsisunz
       run: 7z x -o"${{ github.workspace }}/NSIS_Plugins/Plugins" "${{ github.workspace }}/nsisunz.zip"
-    - name: Download disable firewall
-      uses: carlosperate/download-file-action@v1.0.3
-      with:
-        file-url: https://nsis.sourceforge.io/mediawiki/images/3/34/Firewall-disabler-1.0.zip
 
     - name: Download MoveFileFolder.nsh
       uses: carlosperate/download-file-action@v1.0.3
