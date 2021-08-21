@@ -11,7 +11,7 @@ Var /GLOBAL switch_overwrite
 !define PRODUCT_NAME "SMOO Roblox Graphic mod"
 !define PRODUCT_DESCRIPTION "Shader presets and Graphic mod based on extravi,sitiom"
 !define COPYRIGHT "Copyright © 2021 SMOO"
-!define VERSION "1.0.10"
+!define VERSION "1.0.11"
 
 VIProductVersion "${VERSION}.0"
 VIAddVersionKey "ProductName" "${PRODUCT_NAME}"
