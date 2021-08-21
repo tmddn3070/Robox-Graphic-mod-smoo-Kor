@@ -10,8 +10,8 @@ Var /GLOBAL switch_overwrite
 
 !define PRODUCT_NAME "SMOO Roblox Graphic mod"
 !define PRODUCT_DESCRIPTION "Shader presets and Graphic mod based on extravi,sitiom"
-!define COPYRIGHT "Copyright © 2021 smoo"
-!define VERSION "1.0.5"
+!define COPYRIGHT "Copyright © 2021 SMOO"
+!define VERSION "1.0.10"
 
 VIProductVersion "${VERSION}.0"
 VIAddVersionKey "ProductName" "${PRODUCT_NAME}"
@@ -36,7 +36,7 @@ InstType "Full";1
 !define MUI_WELCOMEFINISHPAGE_BITMAP "smoo.bmp"
 !define MUI_WELCOMEPAGE_TEXT "이 설치기는 당신의 컴퓨터에 ${PRODUCT_NAME}를 설치할것입니다 .$\r$\n\
 $\r$\n\
-이 설치를 계속하기 전에 로블록스를 닫는것이 좋습니다.$\r$\n\
+이 설치를 계속하기 전에 로블록스를 종료하는것이 좋습니다.$\r$\n\
 $\r$\n\
 계속하려면 다음을 클릭하세요."
 
@@ -166,14 +166,14 @@ Function .onInit
   ${Locate} "$LOCALAPPDATA\Roblox\Versions" "/L=F /M=RobloxPlayerBeta.exe" "SetRobloxPath"  
   
   ${If} $robloxPath == ""
-    MessageBox MB_ICONEXCLAMATION "Roblox를 찾지 못하였습니다. https://www.roblox.com/download/client 이 링크에서 로블록스를 다운로드하고 다시시도하세요."
+    MessageBox MB_ICONEXCLAMATION "Roblox를 찾지 못하였습니다. Roblox가 설치되어있는지 확인하고 다시 시도하세요."
     ExecShell open "https://www.roblox.com/download/client"
     Abort
   ${EndIf}
 FunctionEnd
 
 Function "Exit"
-  MessageBox MB_ICONEXCLAMATION "로블록스 Path가 C:\Program Files (x86)에 있는경우 설치할 수 없습니다. 관리자가 아닌 계정으로 로블록스를 설치하시고 다시시도하세요."
+  MessageBox MB_ICONEXCLAMATION "로블록스 설치경로가 C:\Program Files (x86)에 있는경우 설치할 수 없습니다. 관리자가 아닌 계정으로 로블록스를 설치하시고 다시시도하세요."
   Abort
 FunctionEnd
 
