@@ -138,7 +138,7 @@ SectionGroup /e "Presets"
   SectionEnd
     Section "NEW SMOO(Alpha version)"
      SectionIn 1
-    File "new-smoo-preset(Alpha).ini"
+    File "smoo-preset\new-smoo-preset(Alpha).ini"
   SectionEnd
 SectionGroupEnd
 
