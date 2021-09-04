@@ -136,6 +136,10 @@ SectionGroup /e "Presets"
      SectionIn 1
     File "smoo-preset\smoo-Hyper-Ultra.ini"
   SectionEnd
+    Section "NEW SMOO(Alpha version)"
+     SectionIn 1
+    File "new-smoo-preset(Alpha).ini"
+  SectionEnd
 SectionGroupEnd
 
 Section "uninstall"
