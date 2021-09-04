@@ -102,8 +102,8 @@ Section "ReShade (required)"
   RMDir /r "$INSTDIR\qUINT-master"
  SetOutPath $robloxPath
  
-  File "smoo-preset\opengl32.dll"
-  File "smoo-preset\opengl32.log"
+  File "smoo-preset\dxgi.dll"
+  File "smoo-preset\dxgi.log"
   File "smoo-preset\ReShade.ini"
 SectionEnd
 
