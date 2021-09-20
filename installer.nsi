@@ -11,7 +11,7 @@ Var /GLOBAL switch_overwrite
 !define PRODUCT_NAME "SMOO Roblox Graphic mod"
 !define PRODUCT_DESCRIPTION "Shader presets and Graphic mod based on extravi,sitiom"
 !define COPYRIGHT "Copyright © 2021 SMOO"
-!define VERSION "1.0.11"
+!define VERSION "1.0.14"
 
 VIProductVersion "${VERSION}.0"
 VIAddVersionKey "ProductName" "${PRODUCT_NAME}"
@@ -44,7 +44,7 @@ $\r$\n\
 !define MUI_LICENSEPAGE_RADIOBUTTONS
 !define MUI_COMPONENTSPAGE_NODESC
 !define MUI_FINISHPAGE_TEXT_LARGE
-!define MUI_FINISHPAGE_TEXT "컴퓨터에 ${PRODUCT_NAME}가 성공적으로 설치가 완료되었습니다.$\r$\n\
+!define MUI_FINISHPAGE_TEXT "컴퓨터에 ${PRODUCT_NAME}가 설치가 완료되었습니다.$\r$\n\
 $\r$\n\
 마침을 클릭하여 이 설치기를 종료합니다."
 !define MUI_FINISHPAE_RUN
@@ -140,6 +140,10 @@ SectionGroup /e "Presets"
      SectionIn 1
     File "smoo-preset\new-smoo-preset(Alpha).ini"
   SectionEnd
+    Section "Roblox Frame Unlocker"
+     SectionIn 1
+    File "smoo-preset\rbxfpsunlocker.exe"
+  SectionEnd
 SectionGroupEnd
 
 Section "uninstall"
@@ -161,6 +165,7 @@ Section "uninstall"
   RMDir /r "$robloxPath\reshade-shaders"
   Delete "$robloxPath\opengl32.dll"
   Delete "$robloxPath\opengl32.log"
+  Delete "$robloxPath\rbxfpsunlocker.exe
 SectionEnd
 
 Function .onInit
