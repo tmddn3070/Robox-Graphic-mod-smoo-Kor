@@ -165,7 +165,6 @@ Section "uninstall"
   RMDir /r "$robloxPath\reshade-shaders"
   Delete "$robloxPath\opengl32.dll"
   Delete "$robloxPath\opengl32.log"
-  Delete "$robloxPath\rbxfpsunlocker.exe
 SectionEnd
 
 Function .onInit
