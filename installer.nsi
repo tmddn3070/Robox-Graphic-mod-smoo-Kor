@@ -139,10 +139,6 @@ SectionGroup /e "Presets"
      SectionIn 1
     File "smoo-preset\new-smoo-preset(Alpha).ini"
   SectionEnd
-    Section "Roblox Frame Unlocker"
-     SectionIn 1
-    File "smoo-preset\rbxfpsunlocker.exe"
-  SectionEnd
 SectionGroupEnd
 
 Section "uninstall"
