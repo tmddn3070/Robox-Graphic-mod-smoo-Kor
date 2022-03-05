@@ -11,7 +11,7 @@ Var /GLOBAL switch_overwrite
 !define PRODUCT_NAME "SMOO Roblox Graphic mod"
 !define PRODUCT_DESCRIPTION "Shader presets and Graphic mod based on extravi,sitiom"
 !define COPYRIGHT "Copyright © 2021 SMOO"
-!define VERSION "1.0.14"
+!define VERSION "1.0.15"
 
 VIProductVersion "${VERSION}.0"
 VIAddVersionKey "ProductName" "${PRODUCT_NAME}"
@@ -103,7 +103,6 @@ Section "ReShade (required)"
  SetOutPath $robloxPath
  
   File "smoo-preset\dxgi.dll"
-  File "smoo-preset\dxgi.log"
   File "smoo-preset\ReShade.ini"
 SectionEnd
 
