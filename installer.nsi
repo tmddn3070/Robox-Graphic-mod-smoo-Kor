@@ -158,8 +158,7 @@ Section "uninstall"
   Delete "$robloxPath\smoo-Hyper-Ultra.ini"
   Delete "$robloxPath\ReShade.ini"
   RMDir /r "$robloxPath\reshade-shaders"
-  Delete "$robloxPath\opengl32.dll"
-  Delete "$robloxPath\opengl32.log"
+  Delete "$robloxPath\dxgi.dll"
 SectionEnd
 
 Function .onInit
