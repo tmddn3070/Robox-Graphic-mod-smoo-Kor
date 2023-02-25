@@ -76,17 +76,16 @@ Section "ReShade (required)"
   WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\smoo-presets" "InstallLocation" "$INSTDIR"
   WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\smoo-presets" "Publisher" "smoo"
 
-  NSCurl::http GET "https://file.sutp.xyz/Roblox%20Graphic%20MOD/archive/reshade-shaders-master.zip" "reshade-shaders-master.zip" /END
+  NSCurl::http GET "https://github.com/crosire/reshade-shaders/archive/refs/heads/master.zip" "reshade-shaders-master.zip" /END
   nsisunz::Unzip "reshade-shaders-master.zip" "$INSTDIR"
 
 
-  NSCurl::http GET "https://file.sutp.xyz/Roblox%20Graphic%20MOD/archive/prod80-ReShade-Repository-master.zip" "prod80-ReShade-Repository-master.zip" /END
+  NSCurl::http GET "https://github.com/prod80/prod80-ReShade-Repository/archive/refs/heads/master.zip" "prod80-ReShade-Repository-master.zip" /END
   nsisunz::Unzip "prod80-ReShade-Repository-master.zip" "$INSTDIR"
 
-
-  NSCurl::http GET "https://file.sutp.xyz/Roblox%20Graphic%20MOD/archive/qUINT-master.zip" "qUINT-master.zip" /END
+  
+  NSCurl::http GET "https://github.com/martymcmodding/qUINT/archive/refs/heads/master.zip" "qUINT-master.zip" /END
   nsisunz::Unzip "qUINT-master.zip" "$INSTDIR"
-
 
   StrCpy $switch_overwrite 1
 
